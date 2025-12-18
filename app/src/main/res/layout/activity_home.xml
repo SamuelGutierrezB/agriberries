@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tvAdministrator"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:text="@string/administrator"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_administrator"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tvNotifications"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/manageNotifications"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_notifications"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tvKnowledgeCenter"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/manageKnowledgeCenter"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_knowledge_center"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tvClients"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/assignedClients"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_clients"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tvAbout"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/about"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_info"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tvSignOut"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/signOut"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_logout"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

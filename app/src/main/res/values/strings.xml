@@ -1,0 +1,667 @@
+<resources>
+    <string name="app_name">BerryApp</string>
+    <string name="gemini_api_key">AIzaSyAmgg25BSJyqTU_1u5rsWooC2AJvIj1djo</string>
+    // TextView
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="name">Nombre</string>
+    <string name="commercialName">Nombre comercial</string>
+    <string name="group">Grupo</string>
+    <string name="phone">Teléfono</string>
+    <string name="email">Correo electrónico</string>
+    <string name="category">Nivel</string>
+    <string name="birth">Fecha de nacimiento</string>
+    <string name="block">Bloquear</string>
+    <string name="enabledDisabled">Activar/Desactivar</string>
+    <string name="clientName">Nombre del cliente</string>
+    <string name="note">Nota por bloque</string>
+    <string name="manager">Encargado</string>
+    <string name="business">Razón social</string>
+    <string name="frequency">Frecuencia</string>
+    <string name="registration">Fecha de registro</string>
+    <string name="location">Ubicación</string>
+    <string name="state">Estado</string>
+    <string name="hectares">Hectáreas</string>
+    <string name="blockName">Nombre del bloque</string>
+    <string name="crop">Cultivo</string>
+    <string name="type">Variedad</string>
+    <string name="longitude">Longitud de brote</string>
+    <string name="weekly_growing">Crecimiento semanal</string>
+    <string name="surface">Superficie</string>
+    <string name="types">Variedades</string>
+    <string name="soil">Sistema de cultivo</string>
+    <string name="management">Manejo</string>
+    <string name="altitude">Altitud</string>
+    <string name="modality">Modalidad</string>
+    <string name="blocks">Bloques</string>
+    <string name="height">Altura (cm)</string>
+    <string name="plague">Plaga</string>
+    <string name="title">Título</string>
+    <string name="text">Texto</string>
+    <string name="link">Enlace</string>
+    <string name="begin">Inicio</string>
+    <string name="end">Fin</string>
+    <string name="tendency">Tendencia</string>
+    <string name="ingredient">Ingrediente activo</string>
+    <string name="harvest_days">Días a cosecha</string>
+    <string name="measurementUnit">Unidad</string>
+    <string name="measurementUnitPresentation">Presentación (unidad)</string>
+    <string name="quantity_presentation">Presentación (cantidad)</string>
+    <string name="dosePerHectare">Dosis por héctarea</string>
+    <string name="price">Precio</string>
+    <string name="max_applications">Número máximo de aplicaciones</string>
+    <string name="plagues">Plagas</string>
+    <string name="geo_coordinates">Coordenadas geográficas</string>
+    <string name="noConsultants">No hay consultores por el momento</string>
+    <string name="noClients">No hay clientes por el momento</string>
+    <string name="noUnits">No hay unidades de producción por el momento</string>
+    <string name="noCrops">No hay cultivos por el momento</string>
+    <string name="noKnowledge">No hay documentos en el centro de conocimiento por el momento</string>
+    <string name="noPlagues">No hay plagas por el momento</string>
+    <string name="noProducts">No hay productos por el momento</string>
+    <string name="noNotifications">No hay notificaciones por el momento</string>
+    <string name="noDiagnostics">No hay diagnósticos por el momento</string>
+    <string name="units">Unidades de producción</string>
+    <string name="generalInformation">Información general</string>
+    <string name="assignedConsultants">Asesores asignados</string>
+    <string name="observations">Observaciones</string>
+    <string name="assignedClients">Mis clientes</string>
+    <string name="about">Acerca de</string>
+    <string name="dash">-</string>
+    <string name="none">Ninguna</string>
+    <string name="moreInfo">Más información ></string>
+    <string name="level">Nivel de intensidad:</string>
+    <string name="level1">Nivel de intensidad: 1</string>
+    <string name="percentage">Porcentaje:</string>
+    <string name="percentage0">Porcentaje: 0%</string>
+    <string name="execution_applications">Ejecución aplicaciones: %d%%</string>
+    <string name="execution_fertilizers">Ejecución fertilizantes: %d%%</string>
+    <string name="development">Desarrollo:</string>
+    <string name="development1">Desarrollo: 1</string>
+    <string name="furrow_distance">Distancia surco</string>
+    <string name="plant_distance">Distancia planta</string>
+    <string name="sanity">Sanidad:</string>
+    <string name="sanity1">Sanidad: 1</string>
+    <string name="managementLevel">Manejo:</string>
+    <string name="managementLevel1">Manejo: 1</string>
+    <string name="total">Total</string>
+    <string name="average">Promedio</string>
+    <string name="three">3</string>
+    <string name="one">1</string>
+    <string name="fruit_per_plant_meter">Fruto por planta/metro</string>
+    <string name="fruit_size">Tamaño del fruto</string>
+    <string name="gram_per_fruit">Gramo por fruto</string>
+    <string name="shrinkage_percentage_format">Porcentaje de merma: %d%%</string>
+    <string name="shrinkage_percentage_default">Porcentage de merma: 5%</string>
+    <string name="plantation">Plantación</string>
+    <string name="harvest">Poda</string>
+    <string name="dates">Fechas</string>
+    <string name="activities">Labores</string>
+    <string name="tasks">Actividades cíclicas</string>
+    <string name="contingencies">Contingencias</string>
+    <string name="diagnostics">Diagnósticos</string>
+    <string name="diagnostic">Diagnóstico</string>
+    <string name="nitrateSymbol">NO₃</string>
+    <string name="calciumSymbol">Ca²⁺</string>
+    <string name="sodiumSymbol">Na⁺</string>
+    <string name="potassiumSymbol">K⁺</string>
+    <string name="phSymbol">pH</string>
+    <string name="conductivitySymbol">COND</string>
+    <string name="no_observations">Sin observaciones</string>
+    // EditText
+    <string name="username">Nombre de usuario</string>
+    <string name="empty"> </string>
+    <string name="observations_input">Escribir observaciones (opcional)</string>
+    // ImageView
+    <string name="logo">Logo</string>
+    <string name="consultant">Asesor</string>
+    <string name="client">Cliente</string>
+    <string name="notification">Notificación</string>
+    <string name="unit">Unidad de producción</string>
+    <string name="status">Estado</string>
+    <string name="faceIcon">Icono de cara</string>
+    <string name="icon_deleted">Icono de estatus de eliminación</string>
+    <string name="ic_calendar">Icono de calendario</string>
+    <string name="ic_right_arrow">Icono de flecha apuntando hacia la derecha</string>
+    // ImageButton
+    <string name="add">Add</string>
+    <string name="hide">Show/Hide</string>
+    <string name="copy">Copy</string>
+    <string name="pdf">Ver PDF</string>
+    <string name="btn_edit">Editar</string>
+    <string name="btn_save_location">Guardar ubicación</string>
+    // RadioButton
+    <string name="dropper">Gotero</string>
+    <string name="drainage">Drenaje</string>
+    <string name="substratum">Sustrato</string>
+    <string name="foliage">Foliaje</string>
+    // Button
+    <string name="signIn">Iniciar Sesión</string>
+    <string name="signOut">Cerrar Sesión</string>
+    <string name="administrator">Administrador</string>
+    <string name="createConsultant">Registrar asesor</string>
+    <string name="updateConsultant">Modificar asesor</string>
+    <string name="signUpConsultant">Registrar asesor</string>
+    <string name="createClient">Registrar cliente</string>
+    <string name="createProspect">Registrar prospecto</string>
+    <string name="updateClient">Modificar cliente</string>
+    <string name="signUpClient">Registrar cliente</string>
+    <string name="createUnit">Registrar unidad</string>
+    <string name="updateUnit">Aceptar</string>
+    <string name="saveBlock">Guardar bloque</string>
+    <string name="deleteBlock">Eliminar bloque</string>
+    <string name="createCrop">Registrar cultivo</string>
+    <string name="updateCrop">Modificar cultivo</string>
+    <string name="createKnowledge">Registrar documento</string>
+    <string name="updateKnowledge">Modificar documento</string>
+    <string name="deleteKnowledge">Eliminar documento</string>
+    <string name="createPlague">Registrar plaga</string>
+    <string name="updatePlague">Modificar plaga</string>
+    <string name="createProduct">Registrar producto</string>
+    <string name="updateProduct">Modificar producto</string>
+    <string name="createNotification">Crear notificación</string>
+    <string name="updateNotification">Modificar notificación</string>
+    <string name="delete_notification">Eliminar notificación</string>
+    <string name="saveConsultants">Guardar asesores</string>
+    <string name="save_block">Guardar bloque</string>
+    <string name="createDiagnostic">Crear diagnóstico</string>
+    <string name="new_password">Nueva contraseña</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Eliminar</string>
+    <string name="restore">Restaurar</string>
+    <string name="deleteRestore">Eliminar/Restaurar</string>
+    <string name="downloadPdf">Descargar PDF</string>
+    <string name="finish_diagnostic">Finalizar diagnóstico</string>
+    <string name="sharePdf">Compartir PDF</string>
+    <string name="next">Siguiente</string>
+    <string name="searchUpdate">Buscar actualización</string>
+    <string name="createRecommendation">Crear recomendación</string>
+    <string name="generatingRecommendation">Generando recomendación con IA, por favor espera…</string>
+    // AlertDialog
+    <string name="selectUnit">Seleccionar una unidad</string>
+    <string name="elimination">Eliminación</string>
+    <string name="restoration">Restauración</string>
+    <string name="uploading_file">Subiendo archivo…</string>
+    <string name="select_block">Selecciona un bloque</string>
+    <string name="copy_to">Copiar a</string>
+    <string name="askDeleteConsultant">¿Estás seguro que deseas eliminar a este asesor permanentemente?</string>
+    <string name="askRestoreConsultant">¿Estás seguro que deseas recuperar este asesor?</string>
+    <string name="askDeleteCrop">¿Estás seguro que deseas eliminar este cultivo permanentemente?</string>
+    <string name="askRestoreCrop">¿Estás seguro que deseas recuperar este cultivo?</string>
+    <string name="askDeleteKnowledge">¿Estás seguro que deseas eliminar este documento permanentemente?</string>
+    <string name="askRestoreKnowledge">¿Estás seguro que deseas recuperar este documento?</string>
+    <string name="askDeletePlague">¿Estás seguro que deseas eliminar esta plaga permanentemente?</string>
+    <string name="askRestorePlague">¿Estás seguro que deseas recuperar esta plaga?</string>
+    <string name="askDeleteProduct">¿Estás seguro que deseas eliminar este producto permanentemente?</string>
+    <string name="askRestoreProduct">¿Estás seguro que deseas recuperar este producto?</string>
+    <string name="askCropChange">¿Estás seguro que deseas que deseas cambiar de cultivo, si lo haces los bloques creados serán eliminados?</string>
+    <string name="ask_for_notification_deletion">¿Estás seguro que deseas eliminar esta notificación permanentemente?</string>
+    <string name="ask_for_save_diagnostic">¿Estás seguro que deseas finalizar este diagnóstico?</string>
+    <string name="ask_for_sign_out">¿Estás seguro que deseas cerrar la sesión actual?</string>
+    <string name="cancel">Cancelar</string>
+    <string name="confirm">Confirmar</string>
+    // Spinner
+    <string name="all">Todos</string>
+    <string name="deficiency">Deficiencia visual</string>
+    <string name="contingency">Contingencia</string>
+    <string name="phenology">Fenología</string>
+    <string name="agave">Agave</string>
+    <string name="avocado">Aguacate</string>
+    <string name="blueberry">Arandano</string>
+    <string name="raspberry">Frambuesa</string>
+    <string name="strawberry">Fresa</string>
+    <string name="blackberry">Zarzamora</string>
+    <string name="fig">Higo</string>
+    <string name="active">Activo</string>
+    <string name="inactive">Inactivo</string>
+    <string name="deletion">En eliminación</string>
+    <string name="blockeds">Bloqueados</string>
+    <string name="blocked">Bloqueado</string>
+    <string-array name="fruit_sizes">
+        <item>Chico</item>
+        <item>Mediano</item>
+        <item>Grande</item>
+    </string-array>
+    <string-array name="levels">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="blocked">
+        <item>Activos</item>
+        <item>Bloqueados</item>
+    </string-array>
+    <string-array name="actives">
+        <item>Activos</item>
+        <item>Inactivos</item>
+    </string-array>
+    <string-array name="prospects">
+        <item>@string/all</item>
+        <item>Clientes</item>
+        <item>Prospectos</item>
+    </string-array>
+    <string-array name="deleted">
+        <item>Activos</item>
+        <item>En eliminación</item>
+    </string-array>
+    <string-array name="categories">
+        <item>Administrador</item>
+        <item>Diagnosticador</item>
+        <item>Junior</item>
+        <item>Senior</item>
+        <item>Master</item>
+    </string-array>
+    <string-array name="mexican_states">
+        <item>Aguascalientes</item>
+        <item>Baja California</item>
+        <item>Baja California Sur</item>
+        <item>Campeche</item>
+        <item>Chiapas</item>
+        <item>Chihuahua</item>
+        <item>Ciudad de México</item>
+        <item>Coahuila</item>
+        <item>Colima</item>
+        <item>Durango</item>
+        <item>Guanajuato</item>
+        <item>Guerrero</item>
+        <item>Hidalgo</item>
+        <item>Jalisco</item>
+        <item>Estado de México</item>
+        <item>Michoacán</item>
+        <item>Morelos</item>
+        <item>Nayarit</item>
+        <item>Nuevo León</item>
+        <item>Oaxaca</item>
+        <item>Puebla</item>
+        <item>Querétaro</item>
+        <item>Quintana Roo</item>
+        <item>San Luis Potosí</item>
+        <item>Sinaloa</item>
+        <item>Sonora</item>
+        <item>Tabasco</item>
+        <item>Tamaulipas</item>
+        <item>Tlaxcala</item>
+        <item>Veracruz</item>
+        <item>Yucatán</item>
+        <item>Zacatecas</item>
+    </string-array>
+    <string-array name="ingredients">
+        <item>@string/all</item>
+        <item>Abamectina</item>
+        <item>Aceite de árbol de te</item>
+        <item>Aceite parafinico</item>
+        <item>Acequinocyl</item>
+        <item>Acetamiprid</item>
+        <item>Azoxystrobin</item>
+        <item>Azufre coloidal</item>
+        <item>Azufre elemental</item>
+        <item>Bicarbonato de potasio</item>
+        <item>Bifenazato</item>
+        <item>Bifentrina</item>
+        <item>Boscalid</item>
+        <item>Captan</item>
+        <item>Carbarilo</item>
+        <item>Ciflufenamid</item>
+        <item>Clorantraniliprol</item>
+        <item>Diazinon</item>
+        <item>Difenoconazole</item>
+        <item>Etoxazole</item>
+        <item>Fenazaquin</item>
+        <item>Fenhexamid</item>
+        <item>Fenpropatrin</item>
+        <item>Fenpyroximato</item>
+        <item>Flenicamid</item>
+        <item>Flubendiamida</item>
+        <item>Fludioxonil</item>
+        <item>Fluensulfone</item>
+        <item>Fluoxastrobin</item>
+        <item>Flupiradifuron</item>
+        <item>Flupyradifurone</item>
+        <item>Hexitiazox</item>
+        <item>Imidacloprid</item>
+        <item>Malation</item>
+        <item>Metaldehido</item>
+        <item>Metalixil-M</item>
+        <item>Mololaurato de propilenglicol</item>
+        <item>Naled</item>
+        <item>Novaluron</item>
+        <item>Oximedeton metil</item>
+        <item>Piracolstrobina</item>
+        <item>Propiconazole</item>
+        <item>Pyraclostrobin</item>
+        <item>Pyruproxifen</item>
+        <item>Spinetoram</item>
+        <item>Spinosad</item>
+        <item>Spiromesifen</item>
+        <item>Spirotetramat</item>
+        <item>Sufoxaflor</item>
+        <item>Telfenpyrad</item>
+        <item>Thiametoxam</item>
+        <item>Tlametoxam</item>
+    </string-array>
+    <string-array name="frequencies">
+        <item>Única</item>
+        <item>Semanal</item>
+        <item>Quincenal</item>
+        <item>Mensual</item>
+    </string-array>
+    <string-array name="soil">
+        <item>Suelo</item>
+        <item>Sustrato</item>
+    </string-array>
+    <string-array name="management">
+        <item>Convencional</item>
+        <item>Orgánico</item>
+    </string-array>
+    <string-array name="modality">
+        <item>Presencial</item>
+        <item>En línea</item>
+        <item>Mixto</item>
+    </string-array>
+    <string-array name="measurementUnits">
+        <item>ml</item>
+        <item>gr</item>
+        <item>Kg</item>
+        <item>Lt</item>
+        <item>ppm</item>
+        <item>%</item>
+        <item>ton</item>
+        <item>m3</item>
+    </string-array>
+    <string-array name="phenologies">
+        <item>@string/select_phenology</item>
+        <item>Brotación y0</item>
+        <item>Brotación y1</item>
+        <item>Brotación y2</item>
+        <item>Cosecha 1/4</item>
+        <item>Cosecha 2/4</item>
+        <item>Cosecha 3/4</item>
+        <item>Cosecha 4/4</item>
+        <item>Crec. veg 1</item>
+        <item>Crec. veg 2</item>
+        <item>Crec. veg 3</item>
+        <item>Defoliación</item>
+        <item>Diferenciacion-Ax</item>
+        <item>Enraizamiento</item>
+        <item>Finalizado</item>
+        <item>Floración-B</item>
+        <item>Fructificación C1-C3</item>
+        <item>Maduracion</item>
+        <item>Poda media C</item>
+        <item>Poda raz</item>
+    </string-array>
+    <string-array name="deficiencies">
+        <item>Azufre</item>
+        <item>Boro</item>
+        <item>Calcio</item>
+        <item>Cobre</item>
+        <item>Fosforo</item>
+        <item>Hierro</item>
+        <item>Magnesio</item>
+        <item>Manganeso</item>
+        <item>Molibdeno</item>
+        <item>Nitrogeno</item>
+        <item>Potasio</item>
+        <item>Zinc</item>
+    </string-array>
+    <string-array name="contingencies">
+        <item>Escacez mano obra</item>
+        <item>Falta de luz</item>
+        <item>Granizo</item>
+        <item>Heladas</item>
+        <item>Inundación</item>
+        <item>Mal funcionamiento de maquinaria</item>
+        <item>Riego insuficiente</item>
+        <item>Quemadura en hoja</item>
+    </string-array>
+    <string-array name="activities">
+        <item>Abrir/Cerrar mangueras</item>
+        <item>Activación</item>
+        <item>Colocación de plásticos</item>
+        <item>Cosecha</item>
+        <item>Deshojar</item>
+        <item>Desmalezado</item>
+        <item>Desmantelar rancho</item>
+        <item>Enrollar plasticos</item>
+        <item>Fertilización</item>
+        <item>Instalación de infraestructura</item>
+        <item>Lavado de sales</item>
+        <item>Limpieza a cuarto de riego</item>
+        <item>Limpieza a fruta</item>
+        <item>Limpieza de rancho</item>
+        <item>Orden rancho</item>
+        <item>Preparación de terreno</item>
+        <item>Plantaciones</item>
+        <item>Poda</item>
+        <item>Pinchado</item>
+        <item>Poner mallas</item>
+        <item>Raleo</item>
+        <item>Riego</item>
+        <item>Tutoreo</item>
+        <item>Trampeo</item>
+        <item>Ventilación</item>
+    </string-array>
+    <string-array name="tasks">
+        <item>Cosecha</item>
+        <item>Cuadre</item>
+        <item>Instalación infraestructura</item>
+        <item>Maduración</item>
+        <item>Plantaciones</item>
+        <item>Podas</item>
+        <item>Preparacion tereno</item>
+    </string-array>
+    <string-array name="tendencies">
+        <item>Se mantuvo</item>
+        <item>Empeoró</item>
+        <item>Mejoró</item>
+    </string-array>
+    // Menu
+    <string name="locate">Localizar</string>
+    <string name="call">Llamar</string>
+    // Titles
+    <string name="home">Inicio</string>
+    <string name="createBlock">Crear bloque</string>
+    <string name="updateBlock">Modificar bloque</string>
+    <string name="loading">Cargando…</string>
+    <string name="shareDiagnostic">Compartir diagnostico</string>
+    // Administrator
+    <string name="manageConsultants">Asesores</string>
+    <string name="manageClients">Clientes</string>
+    <string name="manageCrops">Cultivos</string>
+    <string name="managePlagues">Plagas</string>
+    <string name="manageProducts">Productos</string>
+    <string name="manageNotifications">Notificaciones</string>
+    <string name="manageKnowledgeCenter">Centro de conocimiento</string>
+    // Toast
+    <string name="plague_already_created">Error: La plaga ya fue agregada anteriormente</string>
+    <string name="error_product_already_created">Error: El producto ya fue agregado anteriormente</string>
+    <string name="invalid_credentials">Error: Las credenciales son inválidas</string>
+    <string name="network_error">Verifica tu conexión a internet e intenta de nuevo más tarde</string>
+    <string name="error_user_does_not_exist">Error: El usuario no existe</string>
+    <string name="try_again_later">Intentar de nuevo más tarde</string>
+    <string name="unfilled">Llenar los campos obligatorios</string>
+    <string name="invalid_phone_number">Número de teléfono inválido</string>
+    <string name="serverFailed">Error de conexión, intentar de nuevo más tarde</string>
+    <string name="passwordLength">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="userInvalid">El usuario no puede tener espacios</string>
+    <string name="invalidCredentials">Credenciales de acceso invalidas</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="signInFailed">No se pudo iniciar sesión, intentar de nuevo más tarde</string>
+    <string name="consultantsAssigned">Asesores asignados exitosamente</string>
+    <string name="user_created">Asesor creado exitosamente</string>
+    <string name="user_updated">Asesor modificado exitosamente</string>
+    <string name="type_already_added">La variedad ya ha sido agregada</string>
+    <string name="userDeleted">El asesor será eliminado en 7 días</string>
+    <string name="userRestored">El asesor fue recuperado, ya no será eliminado</string>
+    <string name="user_not_created">No se pudo crear el asesor, intentar de nuevo más tarde</string>
+    <string name="userNotUpdated">No se pudo modificar el asesor, intentar de nuevo más tarde</string>
+    <string name="userNotDeleted">No se pudo eliminar el asesor, intentar de nuevo más tarde</string>
+    <string name="userNotExist">El usuario no existe</string>
+    <string name="userBlocked">El usuario fue bloqueado</string>
+    <string name="user_in_use">El usuario ya existe</string>
+    <string name="clientCreated">Cliente registrado exitosamente</string>
+    <string name="clientUpdated">Cliente modificado exitosamente</string>
+    <string name="clientNotCreated">No se pudo registrar el cliente, intentar de nuevo más tarde</string>
+    <string name="clientNotUpdated">No se pudo modificar el cliente, intentar de nuevo más tarde</string>
+    <string name="unitCreated">Unidad registrada exitosamente</string>
+    <string name="unitUpdated">Unidad modificada exitosamente</string>
+    <string name="unitNotCreated">No se pudo registrar la unidad, intentar de nuevo más tarde</string>
+    <string name="unitNotUpdated">No se pudo modificar la unidad, intentar de nuevo más tarde</string>
+    <string name="blockSaved">Bloque guardado exitosamente</string>
+    <string name="blockDeleted">Bloque eliminado exitosamente</string>
+    <string name="cropCreated">Cultivo registrado exitosamente</string>
+    <string name="cropUpdated">Cultivo modificado exitosamente</string>
+    <string name="cropDeleted">El cultivo será eliminado en 7 días</string>
+    <string name="cropRestored">El cultivo fue recuperado, ya no será eliminado</string>
+    <string name="cropNotCreated">No se pudo registrar el cultivo, intentar de nuevo más tarde</string>
+    <string name="cropNotUpdated">No se pudo modificar el cultivo, intentar de nuevo más tarde</string>
+    <string name="cropNotDeleted">No se pudo eliminar el cultivo, intentar de nuevo más tarde</string>
+    <string name="cropNotRestored">No se pudo recuperar el cultivo, intentar de nuevo más tarde</string>
+    <string name="cropNotAdd">No se pueden agregar más cultivos</string>
+    <string name="cropAlreadyAdded">El cultivo ya fue agregado</string>
+    <string name="knowledgeCreated">Documento registrado exitosamente</string>
+    <string name="knowledgeUpdated">Documento modificado exitosamente</string>
+    <string name="knowledgeDeleted">El documento será eliminado en 7 días</string>
+    <string name="knowledgeRestored">El documento fue recuperado, ya no será eliminado</string>
+    <string name="knowledgeNotCreated">No se pudo registrar el documento, intentar de nuevo más tarde</string>
+    <string name="knowledgeNotUpdated">No se pudo modificar el documento, intentar de nuevo más tarde</string>
+    <string name="knowledgeNotDeleted">No se pudo eliminar el documento, intentar de nuevo más tarde</string>
+    <string name="knowledgeNotRestored">No se pudo recuperar el documento, intentar de nuevo más tarde</string>
+    <string name="plagueCreated">Plaga registrada exitosamente</string>
+    <string name="plagueUpdated">Plaga modificada exitosamente</string>
+    <string name="plagueDeleted">La plaga será eliminado en 7 días</string>
+    <string name="plagueRestored">La plaga fue recuperada, ya no será eliminada</string>
+    <string name="plagueNotCreated">No se pudo registrar la plaga, intentar de nuevo más tarde</string>
+    <string name="plagueNotUpdated">No se pudo modificar la plaga, intentar de nuevo más tarde</string>
+    <string name="plagueNotDeleted">No se pudo eliminar la plaga, intentar de nuevo más tarde</string>
+    <string name="plagueNotRestored">No se pudo recuperar la plaga, intentar de nuevo más tarde</string>
+    <string name="plagueNotAdd">No se pueden agregar más plagas</string>
+    <string name="plagueAlreadyAdded">La plaga ya fue agregada</string>
+    <string name="deficiencyNotAdd">No se pueden agregar más deficiencias</string>
+    <string name="deficiencyAlreadyAdded">La deficiencia ya fue agregada</string>
+    <string name="contingencyNotAdd">No se pueden agregar más contingencias</string>
+    <string name="contingencyAlreadyAdded">La contingencia ya fue agregada</string>
+    <string name="activityNotAdd">No se pueden agregar más actividades</string>
+    <string name="activityAlreadyAdded">La actividad ya fue agregada</string>
+    <string name="productCreated">Producto registrado exitosamente</string>
+    <string name="productUpdated">Producto modificado exitosamente</string>
+    <string name="productNotCreated">No se pudo registrar el producto, intentar de nuevo más tarde</string>
+    <string name="productNotUpdated">No se pudo modificar el producto, intentar de nuevo más tarde</string>
+    <string name="productDeleted">El producto será eliminado en 7 días</string>
+    <string name="productRestored">El producto fue recuperado, ya no será eliminado</string>
+    <string name="notificationCreated">Notificación creada exitosamente</string>
+    <string name="notificationUpdated">Notificación modificada exitosamente</string>
+    <string name="invalidLink">Enlace inválido, no se puede abrir</string>
+    <string name="noCreatedUnits">No hay unidades de producción, favor de crear una</string>
+    <string name="sessionClosed">Sesión cerrada</string>
+    <string name="invalidDates">Fechas invalidas</string>
+    <string name="unfilledBlocks">Llenar todos los bloques</string>
+    <string name="pdfDownloaded">PDF descargado con éxito</string>
+    <string name="errorDownloadingFile">Error al descargar el archivo:</string>
+    <string name="pdfDownloadPath">PDF descargado en:</string>
+    <string name="storagePermissionDenied">Permiso de almacenamiento denegado, activar desde configuración</string>
+    <string name="locationPermissionDenied">Permiso de ubicación denegado, activar desde configuración</string>
+    <string name="no_app_for_calls">No se encontró ninguna aplicación para hacer llamadas</string>
+    <string name="no_location_selected">Seleccionar una ubicación</string>
+    <string name="block_name_already_used">Este nombre ya está siendo usado</string>
+    <string name="file_uploaded">El diagnóstico fue guardado y subido exitosamente</string>
+    <string name="second_date_must_be_greater">La segunda fecha debe ser mayor a la primera</string>
+    <string name="notification_deleted">La notificación fue eliminada exitosamente</string>
+    <string name="item_created">El bloque ha sido guardado exitosamente</string>
+    <string name="element_already_added">Este elemento ya habia sido agregado</string>
+    <string name="weekly_growing_too_high">El crecimiento semanal no puede ser mayor a 30</string>
+    <string name="longitude_too_high">La longitud de brote no puede ser mayor a la altura</string>
+    <string name="press_back_once_again">Presione nuevamente para regresar, asegúrese de guardar los cambios</string>
+    <string name="new_version_available">Actualización disponible</string>
+    <string name="current_version_updated">Versión más reciente instalada</string>
+    <string name="could_not_get_version">Error: Intentar de nuevo más tarde</string>
+    <string name="could_not_share">Error: No se pudo compartir</string>
+    <string name="cannot_modify_this_user">Error: No puedes modificar este usuario</string>
+    <string name="notification_permission_denied">Permiso de notificaciones denegado</string>
+    <string name="not_enough_items">Crear información de algún bloque</string>
+    // PDF
+    <string name="pdf_header_diagnostic">DIAGNÓSTICO DE CAMPO</string>
+    <string name="pdf_header_general_information">Información General</string>
+    <string name="pdf_header_phenology">Fenología</string>
+    <string name="pdf_header_heights">Altura (cm)</string>
+    <string name="pdf_header_plagues">Plagas</string>
+    <string name="pdf_header_deficiencies">Deficiencias</string>
+    <string name="pdf_header_contingencies">Contingencias</string>
+    <string name="pdf_header_activities">Labores</string>
+    <string name="pdf_header_tasks">Actividades</string>
+    <string name="pdf_header_harvest">Cosecha</string>
+    <string name="pdf_header_nutrients_dropper">Nutrientes (Gotero) ppm</string>
+    <string name="pdf_header_nutrients_drainage">Nutrientes (Drenaje) ppm</string>
+    <string name="pdf_header_nutrients_substratum">Nutrientes (Sustrato) ppm</string>
+    <string name="pdf_header_nutrients_foliage">Nutrientes (Foliaje) ppm</string>
+    <string name="pdf_header_empty_nutrients">Sin medición</string>
+    <string name="pdf_header_observations">Observaciones</string>
+    <string name="pdf_header_score">Puntaje final</string>
+    <string name="pdf_header_execution">Porcentaje de ejecución</string>
+    <string name="pdf_creator">Creado por:</string>
+    <string name="pdf_ranch">Rancho:</string>
+    <string name="pdf_location">Lugar:</string>
+    <string name="pdf_crop">Cultivo:</string>
+    <string name="pdf_date">Fecha:</string>
+    <string name="pdf_system">Sistema:</string>
+    <string name="pdf_altitude">Altitud:</string>
+    <string name="pdf_hectares">Has:</string>
+    <string name="pdf_week">Semana:</string>
+    <string name="pdf_block">Bloque</string>
+    <string name="pdf_consultant">Realizó:</string>
+    <string name="headerLocation">Ubicación</string>
+    <string name="headerVariety">Variedad</string>
+    <string name="headerPhenology">Fenología</string>
+    <string name="headerDescription">Descripción</string>
+    <string name="headerOrganism">Organismo</string>
+    <string name="headerDeficiency">Deficiencia</string>
+    <string name="headerContingency">Contingencia</string>
+    <string name="headerActivity">Labor</string>
+    <string name="headerTask">Actividad</string>
+    <string name="headerIntensity">Intensidad</string>
+    <string name="headerProgress">Progreso</string>
+    <string name="headerBlock">Bloque</string>
+    <string name="headerNitrateSymbol">NO₃</string>
+    <string name="headerCalciumSymbol">Ca²⁺</string>
+    <string name="headerSodiumSymbol">Na⁺</string>
+    <string name="headerPotassiumSymbol">K⁺</string>
+    <string name="headerPhSymbol">pH</string>
+    <string name="headerConductivitySymbol">COND</string>
+    <string name="headerDevelopment">Desarrollo</string>
+    <string name="headerSanity">Sanidad</string>
+    <string name="headerManagement">Manejo</string>
+    <string name="headerTotal">Total</string>
+    <string name="headerAverage">Promedio</string>
+    <string name="header_size">Tamaño</string>
+    <string name="header_fruit_per_plant_meter">fr/PLT</string>
+    <string name="header_gram_per_fruit">gr/fruto</string>
+    <string name="header_efficiency">Eficiencia</string>
+    <string name="header_kilogram_per_hectare">kgs/HA</string>
+    <string name="header_applications">Aplicaciones</string>
+    <string name="header_fertilizers">Fertilizantes</string>
+    <string name="header_tendency">Tendencia</string>
+    <string name="descriptionPlantationDate">Fecha de plantación:</string>
+    <string name="descriptionHeight">Altura de seto:</string>
+    <string name="descriptionLongitude">Longitud de brote:</string>
+    <string name="descriptionWeeklyGrowing">Crecimiento semanal:</string>
+    // Java
+    <string name="domain">\@agriberries.mx</string>
+    <string name="unique">Única</string>
+    <string name="harvest_text">Cosecha</string>
+    <string name="done">Finalizado</string>
+    <string name="today">Hoy</string>
+    <string name="yesterday">Ayer</string>
+    <string name="ago">Hace</string>
+    <string name="days">días</string>
+    <string name="weekly">Semanal</string>
+    <string name="fortnightly">Quincenal</string>
+    <string name="monthly">Mensual</string>
+    <string name="characters">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%*</string>
+    <string name="select_phenology">Seleccionar fenología</string>
+    <string name="version">Versión 1.12</string>
+    <string name="versionNotes">Modificaciones de la nueva versión 1.12\n
+        \n- Se movieron las notas del sector a un cuadro en específico en el reporte.
+        \n- Se agregó la tendencia.</string>
+</resources>

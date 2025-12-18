@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"
+        tools:ignore="ScopedStorage" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+            <data android:scheme="tel" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".Utils.AgriBerries"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AgriBerries"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDsuW7uSLnRVMVbkAMJVeOjev7ruYVbVJo" />
+
+        <activity
+            android:name=".SignInActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MapActivity" />
+        <activity android:name=".SaveDiagnosticActivity" />
+        <activity android:name=".Admin.UpdateProductAdmin" />
+        <activity android:name=".Admin.CreateProductAdmin" />
+        <activity android:name=".Admin.ManageTreatmentsAdmin" />
+        <activity android:name=".Admin.UpdateKnowledgeAdmin" />
+        <activity android:name=".Admin.CreateKnowledgeAdmin" />
+        <activity android:name=".Admin.ManageKnowledgeCenterAdmin" />
+        <activity android:name=".Admin.UpdatePlagueAdmin" />
+        <activity android:name=".Admin.CreatePlagueAdmin" />
+        <activity android:name=".Admin.ManagePlaguesAdmin" />
+        <activity android:name=".Admin.UpdateCropAdmin" />
+        <activity android:name=".Admin.CreateCropAdmin" />
+        <activity android:name=".Admin.ManageCropsAdmin" />
+        <activity android:name=".UpdateUnitActivity" />
+        <activity android:name=".CreateUnitActivity" />
+        <activity android:name=".Admin.UpdateClientAdmin" />
+        <activity android:name=".Admin.ShowClientAdmin" />
+        <activity android:name=".Admin.CreateClientAdmin" />
+        <activity android:name=".Admin.ManageClientsAdmin" />
+        <activity android:name=".Admin.UpdateConsultantAdmin" />
+        <activity android:name=".Admin.CreateConsultantAdmin" />
+        <activity android:name=".Admin.ManageConsultantsAdmin" />
+        <activity android:name=".NotificationsActivity" />
+        <activity android:name=".Admin.UpdateNotificationAdmin" />
+        <activity android:name=".Admin.CreateNotificationAdmin" />
+        <activity android:name=".Admin.ManageNotificationsAdmin" />
+        <activity android:name=".Admin.MenuAdmin" />
+        <activity android:name=".KnowledgeCenterActivity" />
+        <activity android:name=".NutrientsActivity" />
+        <activity android:name=".CreateDiagnosticActivity" />
+        <activity android:name=".ShowClientActivity" />
+        <activity android:name=".ShowPdfActivity" />
+        <activity android:name=".ClientsActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".CreateProspectActivity" />
+        <activity android:name=".RecommendationActivity" />
+
+        <service
+            android:name=".Services.MyFirebaseMessaging"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "584649743626",
+    "project_id": "agriberries-mx",
+    "storage_bucket": "agriberries-mx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584649743626:android:363fbe79a81303cb5ceef3",
+        "android_client_info": {
+          "package_name": "com.agriberriesmx.agriberries"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584649743626-2bmmj95f23jqgva8o1evs96be5kk1ubj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4NuPQ_-vpdgkE5IFOHxR9FDdQBtOd9MI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584649743626-2bmmj95f23jqgva8o1evs96be5kk1ubj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

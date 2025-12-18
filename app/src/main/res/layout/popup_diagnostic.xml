@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDevelopment"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/development1"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <com.agriberriesmx.agriberries.Utils.CustomSeekBarDiagnostic
+            android:id="@+id/seekBarDevelopment"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="9" />
+
+        <TextView
+            android:id="@+id/tvSanity"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sanity1"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <com.agriberriesmx.agriberries.Utils.CustomSeekBarDiagnostic
+            android:id="@+id/seekBarSanity"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="9" />
+
+        <TextView
+            android:id="@+id/tvManagement"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/managementLevel1"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <com.agriberriesmx.agriberries.Utils.CustomSeekBarDiagnostic
+            android:id="@+id/seekBarManagement"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="9" />
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/total"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/average"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/three"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvAverage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/one"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivFace"
+            android:layout_marginTop="15dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/faceIcon" />
+
+        <TextView
+            android:id="@+id/tvExecutionApplications"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <com.agriberriesmx.agriberries.Utils.CustomSeekBarPercentageAdd
+            android:id="@+id/seekBarExecutionApplications"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvExecutionFertilizers"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <com.agriberriesmx.agriberries.Utils.CustomSeekBarPercentageAdd
+            android:id="@+id/seekBarExecutionFertilizers"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tendency"
+            android:textStyle="bold"
+            android:textSize="22sp" />
+
+        <Spinner
+            android:id="@+id/spinnerTendency"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/observations"
+            android:textStyle="bold"
+            android:textSize="22sp" />
+
+        <EditText
+            android:id="@+id/etvObservations"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:minHeight="48dp"
+            android:inputType="textMultiLine"
+            android:hint="@string/observations_input"
+            android:autofillHints=""
+            android:background="@drawable/border_rectangular" />
+
+    </LinearLayout>
+
+</ScrollView>

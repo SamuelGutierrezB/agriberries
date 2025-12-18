@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/downloadPdf"
+        android:title="@string/downloadPdf"
+        android:icon="@drawable/ic_download"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/sharePdf"
+        android:title="@string/sharePdf"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="ifRoom" />
+
+</menu>

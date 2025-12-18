@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tvManageConsultants"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/manageConsultants"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_consultants"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tvManageKnowledgeCenter"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/manageKnowledgeCenter"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_knowledge_center"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tvManageClients"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/manageClients"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_clients"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tvManageCrops"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/manageCrops"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_crops"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tvManageNotifications"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/manageNotifications"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_manage_notifications"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tvManagePlagues"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/managePlagues"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_plagues"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tvManageTreatments"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:text="@string/manageProducts"
+                android:textSize="22sp"
+                android:background="@drawable/border_round"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawablePadding="10dp"
+                app:drawableStartCompat="@drawable/ic_treatments"
+                app:drawableEndCompat="@drawable/ic_arrow" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

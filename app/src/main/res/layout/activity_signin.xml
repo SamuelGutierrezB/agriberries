@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/ic_logo"
+            android:contentDescription="@string/logo" />
+
+        <EditText
+            android:id="@+id/etvUser"
+            android:layout_marginTop="30dp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:background="@drawable/border_round"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="10dp"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/etvPassword"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:background="@drawable/border_round"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="10dp"
+            android:importantForAutofill="no" />
+
+        <ProgressBar
+            android:layout_marginTop="30dp"
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/signIn"
+            android:textStyle="bold"
+            android:backgroundTint="@color/icon"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>
