@@ -660,7 +660,8 @@
     <string name="monthly">Mensual</string>
     <string name="characters">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%*</string>
     <string name="select_phenology">Seleccionar fenología</string>
-    <string name="version">Versión 1.12.2</string>
-    <string name="versionNotes">Modificaciones de la nueva versión 1.12.2\n
-        \n- Se corrigió falta de datos de algunos clientes en la vista de administrator</string>
+    <string name="version">Versión 1.12.3</string>
+    <string name="versionNotes">Modificaciones de la nueva versión 1.12.3\n
+        \n- Se corrigió problema de clientes que no mostraban unidades de producción y diagnósticos\n
+        \n- Se solucionó el error al asignar asesores a clientes en el módulo de administración\n
 </resources>

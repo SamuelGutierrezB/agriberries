@@ -50,6 +50,7 @@ import java.util.stream.Collectors;
 
 public class ShowClientAdmin extends AppCompatActivity {
     private Client client;
+    private String sanitizedClientId;
     private ListenerRegistration clientListener;
     private ListenerRegistration unitListener;
     private ListenerRegistration consultantListener;
@@ -109,8 +110,11 @@ public class ShowClientAdmin extends AppCompatActivity {
         Button btnCreateUnit = findViewById(R.id.btnCreateUnit);
         Button btnUpdateConsultants = findViewById(R.id.btnUpdateConsultants);
 
-        // Get client id
+        // Get client id and sanitize it
         String clientId = getIntent().getStringExtra("id");
+        String originalId = clientId;
+        clientId = sanitizeId(clientId);
+        sanitizedClientId = clientId; // Guardar para usar en toda la activity
 
         // Initialize toolbar
         setSupportActionBar(toolbar);
@@ -185,8 +189,9 @@ public class ShowClientAdmin extends AppCompatActivity {
                                     if (value1 != null)
                                         consultantList.addAll(value1.toObjects(Consultant.class));
                                     assignedConsultantList.clear();
-                                    assignedConsultantList.addAll(client.getConsultants());
-
+                                    if (client.getConsultants() != null) {
+                                        assignedConsultantList.addAll(client.getConsultants());
+                                    }
                                     // Set adapter for recycler view consultants
                                     AssignedConsultantAdapter assignedConsultantAdapter = new AssignedConsultantAdapter(
                                             consultantList, assignedConsultantList);
@@ -271,18 +276,31 @@ public class ShowClientAdmin extends AppCompatActivity {
         btnUpdateClient.setOnClickListener(
                 v -> startActivity(new Intent(this, UpdateClientAdmin.class).putExtra("client", client)));
         btnCreateUnit.setOnClickListener(
-                v -> startActivity(new Intent(this, CreateUnitActivity.class).putExtra("clientId", client.getId())));
+                v -> startActivity(new Intent(this, CreateUnitActivity.class).putExtra("clientId", sanitizedClientId)));
         btnUpdateConsultants.setOnClickListener(v -> updateAssignedConsultants());
     }
 
     private void updateAssignedConsultants() {
+
         // Connect to Firebase Firestore
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        DocumentReference documentReference = db.collection("clients").document(client.getId());
+        DocumentReference documentReference = db.collection("clients").document(sanitizedClientId);
 
         // Update assigned consultants
-        documentReference.update("consultants", assignedConsultantList);
-        Toast.makeText(this, getResources().getString(R.string.consultantsAssigned), Toast.LENGTH_SHORT).show();
+        documentReference.update("consultants", assignedConsultantList)
+                .addOnSuccessListener(aVoid -> {
+                    Toast.makeText(this, getResources().getString(R.string.consultantsAssigned), Toast.LENGTH_SHORT)
+                            .show();
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                });
+    }
+
+    private String sanitizeId(String s) {
+        if (s == null)
+            return null;
+        return s.replaceAll("[^A-Za-z0-9_-]", "");
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

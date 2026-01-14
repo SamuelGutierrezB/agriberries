@@ -66,16 +66,21 @@ public class AssignedConsultantAdapter extends RecyclerView.Adapter<AssignedCons
 
             // Initialize views
             tvName.setText(consultant.getName());
-            checkBox.setChecked(assignedConsultantList.contains(id));
+            boolean isAssigned = assignedConsultantList.contains(id);
+            checkBox.setChecked(isAssigned);
 
             // Add listeners
             linearLayoutAssignedConsultant.setOnClickListener(v -> changeActivity(itemView.getContext(), consultant));
             checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
-                if (isChecked)
-                    if (!assignedConsultantList.contains(id))
+                if (isChecked) {
+                    // Usuario marcó el checkbox - agregar si no está
+                    if (!assignedConsultantList.contains(id)) {
                         assignedConsultantList.add(id);
-                    else
-                        assignedConsultantList.remove(id);
+                    }
+                } else {
+                    // Usuario desmarcó el checkbox - remover si está
+                    assignedConsultantList.remove(id);
+                }
             });
         }
 
