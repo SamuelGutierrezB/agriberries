@@ -117,7 +117,8 @@ public class ShowClientActivity extends AppCompatActivity {
         }
 
         // Set layout manager for recycler view units
-        LinearLayoutManager linearLayoutManagerUnits = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager linearLayoutManagerUnits = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,
+                false);
         rvUnits.setLayoutManager(linearLayoutManagerUnits);
 
         // Set adapter for recycler view units
@@ -125,11 +126,13 @@ public class ShowClientActivity extends AppCompatActivity {
         rvUnits.setAdapter(unitAdapter);
 
         // Set layout manager for recycler view diagnostics
-        LinearLayoutManager linearLayoutManagerDiagnostics = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager linearLayoutManagerDiagnostics = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,
+                false);
         rvDiagnostics.setLayoutManager(linearLayoutManagerDiagnostics);
 
         // Set adapter for recycler view diagnostics
-        DiagnosticAdapter diagnosticAdapter = new DiagnosticAdapter(diagnosticList, unitList, client.getId(), client.getName());
+        DiagnosticAdapter diagnosticAdapter = new DiagnosticAdapter(diagnosticList, unitList, client.getId(),
+                client.getName());
         rvDiagnostics.setAdapter(diagnosticAdapter);
 
         // Initialize views
@@ -150,8 +153,10 @@ public class ShowClientActivity extends AppCompatActivity {
         tvEmail.setText(client.getEmail());
         tvFrequency.setText(frequencies[client.getFrequency()]);
         tvRegistration.setText(simpleDateFormat.format(client.getRegistration()));
-        if (client.isBlocked()) tvStatus.setText(getResources().getString(R.string.blocked));
-        else tvStatus.setText(getResources().getString(R.string.active));
+        if (client.isBlocked())
+            tvStatus.setText(getResources().getString(R.string.blocked));
+        else
+            tvStatus.setText(getResources().getString(R.string.active));
 
         // Get document reference of current user
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -184,35 +189,36 @@ public class ShowClientActivity extends AppCompatActivity {
                             }
                         }
                     }
-        });
+                });
 
         // Get diagnostics
         CollectionReference diagnosticsCollectionReference = documentReference.collection("diagnostics");
 
-        diagnosticListener = diagnosticsCollectionReference.orderBy("creation", Query.Direction.DESCENDING).addSnapshotListener((value, error) -> {
-            // Get documents
-            if (value != null) {
-                // Convert them to diagnostics
-                diagnosticList.clear();
-                diagnosticList.addAll(value.toObjects(Diagnostic.class));
+        diagnosticListener = diagnosticsCollectionReference.orderBy("creation", Query.Direction.DESCENDING)
+                .addSnapshotListener((value, error) -> {
+                    // Get documents
+                    if (value != null) {
+                        // Convert them to diagnostics
+                        diagnosticList.clear();
+                        diagnosticList.addAll(value.toObjects(Diagnostic.class));
 
-                // Notify about the changes on the list
-                diagnosticAdapter.notifyDataSetChanged();
+                        // Notify about the changes on the list
+                        diagnosticAdapter.notifyDataSetChanged();
 
-                // Update visibility
-                if (btnCreateDiagnostic.getVisibility() == View.VISIBLE) {
-                    if (diagnosticList.size() > 0) {
-                        // Show recycler view
-                        linearLayoutNoDiagnostics.setVisibility(View.GONE);
-                        rvDiagnostics.setVisibility(View.VISIBLE);
-                    } else {
-                        // Hide recycler view
-                        rvUnits.setVisibility(View.GONE);
-                        linearLayoutNoUnits.setVisibility(View.VISIBLE);
+                        // Update visibility
+                        if (btnCreateDiagnostic.getVisibility() == View.VISIBLE) {
+                            if (diagnosticList.size() > 0) {
+                                // Show recycler view
+                                linearLayoutNoDiagnostics.setVisibility(View.GONE);
+                                rvDiagnostics.setVisibility(View.VISIBLE);
+                            } else {
+                                // Hide recycler view
+                                rvUnits.setVisibility(View.GONE);
+                                linearLayoutNoUnits.setVisibility(View.VISIBLE);
+                            }
+                        }
                     }
-                }
-            }
-        });
+                });
 
         // Add listeners
         linearLayoutToggleGeneralInformation.setOnClickListener(v -> {
@@ -235,8 +241,10 @@ public class ShowClientActivity extends AppCompatActivity {
                 ivUnits.setBackgroundResource(R.drawable.ic_arrow_right);
             } else {
                 // Show units
-                if (unitList.size() == 0) linearLayoutNoUnits.setVisibility(View.VISIBLE);
-                else rvUnits.setVisibility(View.VISIBLE);
+                if (unitList.size() == 0)
+                    linearLayoutNoUnits.setVisibility(View.VISIBLE);
+                else
+                    rvUnits.setVisibility(View.VISIBLE);
                 btnCreateUnit.setVisibility(View.VISIBLE);
                 ivUnits.setBackgroundResource(R.drawable.ic_arrow_drop);
             }
@@ -250,20 +258,23 @@ public class ShowClientActivity extends AppCompatActivity {
                 ivDiagnostics.setBackgroundResource(R.drawable.ic_arrow_right);
             } else {
                 // Show units
-                if (diagnosticList.size() == 0) linearLayoutNoDiagnostics.setVisibility(View.VISIBLE);
-                else rvDiagnostics.setVisibility(View.VISIBLE);
+                if (diagnosticList.size() == 0)
+                    linearLayoutNoDiagnostics.setVisibility(View.VISIBLE);
+                else
+                    rvDiagnostics.setVisibility(View.VISIBLE);
                 btnCreateDiagnostic.setVisibility(View.VISIBLE);
                 ivDiagnostics.setBackgroundResource(R.drawable.ic_arrow_drop);
             }
         });
-        btnCreateUnit.setOnClickListener(v -> startActivity(new Intent(this, CreateUnitActivity.class).putExtra("clientId", client.getId())));
+        btnCreateUnit.setOnClickListener(
+                v -> startActivity(new Intent(this, CreateUnitActivity.class).putExtra("clientId", client.getId())));
         btnCreateDiagnostic.setOnClickListener(v -> changeActivityDiagnostic());
     }
 
     private void changeActivityDiagnostic() {
         // Initialize variables
         List<String> unitCropLocationList = new ArrayList<>();
-        for (Unit unit :  unitList) {
+        for (Unit unit : unitList) {
             String cropLocation = unit.getName();
             cropLocation += " - ";
             cropLocation += unit.getCrop();
@@ -277,7 +288,8 @@ public class ShowClientActivity extends AppCompatActivity {
 
             // Create spinner and adapter
             Spinner spinner = new Spinner(this);
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, unitCropLocationList);
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,
+                    unitCropLocationList);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinner.setAdapter(adapter);
             builder.setView(spinner);
@@ -301,7 +313,8 @@ public class ShowClientActivity extends AppCompatActivity {
             // Show Alert Dialog
             AlertDialog dialog = builder.create();
             dialog.show();
-        } else Toast.makeText(this, getResources().getString(R.string.noCreatedUnits), Toast.LENGTH_SHORT).show();
+        } else
+            Toast.makeText(this, getResources().getString(R.string.noCreatedUnits), Toast.LENGTH_SHORT).show();
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -323,7 +336,8 @@ public class ShowClientActivity extends AppCompatActivity {
                 AtomicInteger selectedPosition = new AtomicInteger(-1);
                 ListView listView = new ListView(this);
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.item_list_view,
-                        filteredUnits.stream().map(pair -> pair.first.getName() + " - " + pair.first.getLocation()).collect(Collectors.toList())) {
+                        filteredUnits.stream().map(pair -> pair.first.getName() + " - " + pair.first.getLocation())
+                                .collect(Collectors.toList())) {
                     @NonNull
                     @Override
                     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -358,25 +372,32 @@ public class ShowClientActivity extends AppCompatActivity {
                 builder.setPositiveButton(getResources().getString(R.string.confirm), (dialog, which) -> {
                     if (selectedUnit[0] != null) {
                         // Open Google Maps and trace route from current location
-                        String uriStr = "https://www.google.com/maps/dir/?api=1&destination=" + selectedUnit[0].getLatitude() + "," + selectedUnit[0].getLongitude() + "&travelmode=driving";
+                        String uriStr = "https://www.google.com/maps/dir/?api=1&destination="
+                                + selectedUnit[0].getLatitude() + "," + selectedUnit[0].getLongitude()
+                                + "&travelmode=driving";
                         Uri gmmIntentUri = Uri.parse(uriStr);
                         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                         mapIntent.setPackage("com.google.android.apps.maps");
-                        if (mapIntent.resolveActivity(getPackageManager()) != null) startActivity(mapIntent);
+                        if (mapIntent.resolveActivity(getPackageManager()) != null)
+                            startActivity(mapIntent);
                     }
                 });
 
                 builder.setNegativeButton(getResources().getString(R.string.cancel), null);
                 builder.show();
-            } else Toast.makeText(this, getResources().getString(R.string.noUnits), Toast.LENGTH_SHORT).show();
+            } else
+                Toast.makeText(this, getResources().getString(R.string.noUnits), Toast.LENGTH_SHORT).show();
         } else if (itemId == R.id.call) {
             // Verify the client has information
             if (client != null) {
                 // Call the client
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:" + client.getPhone()));
-                if (intent.resolveActivity(getPackageManager()) != null) startActivity(intent);
-                else Toast.makeText(this, getResources().getString(R.string.no_app_for_calls), Toast.LENGTH_SHORT).show();
+                if (intent.resolveActivity(getPackageManager()) != null)
+                    startActivity(intent);
+                else
+                    Toast.makeText(this, getResources().getString(R.string.no_app_for_calls), Toast.LENGTH_SHORT)
+                            .show();
             }
 
             return true;
