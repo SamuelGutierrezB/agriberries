@@ -80,6 +80,8 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.ViewHolder
         String id = client.getId();
         String sanitizedId = sanitizeId(id);
 
+        client.setId(sanitizedId);
+
         Intent intent;
         if (admin)
             intent = new Intent(context, ShowClientAdmin.class).putExtra("id", sanitizedId);
