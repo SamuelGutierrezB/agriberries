@@ -71,14 +71,17 @@ public class AssignedConsultantAdapter extends RecyclerView.Adapter<AssignedCons
             // Add listeners
             linearLayoutAssignedConsultant.setOnClickListener(v -> changeActivity(itemView.getContext(), consultant));
             checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
-                if (isChecked) if (!assignedConsultantList.contains(id)) assignedConsultantList.add(id);
-                else assignedConsultantList.remove(id);
+                if (isChecked)
+                    if (!assignedConsultantList.contains(id))
+                        assignedConsultantList.add(id);
+                    else
+                        assignedConsultantList.remove(id);
             });
         }
 
         private void changeActivity(Context context, Consultant consultant) {
             // Change activity to show more information
-            Intent intent =  new Intent(context, UpdateConsultantAdmin.class);
+            Intent intent = new Intent(context, UpdateConsultantAdmin.class);
             intent.putExtra("consultant", consultant);
             context.startActivity(intent);
         }

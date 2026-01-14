@@ -123,7 +123,8 @@ public class ShowClientAdmin extends AppCompatActivity {
         }
 
         // Set layout manager for recycler view units
-        LinearLayoutManager linearLayoutManagerUnits = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager linearLayoutManagerUnits = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,
+                false);
         rvUnits.setLayoutManager(linearLayoutManagerUnits);
 
         // Set adapter for recycler view units
@@ -131,7 +132,8 @@ public class ShowClientAdmin extends AppCompatActivity {
         rvUnits.setAdapter(unitAdapter);
 
         // Set layout manager for recycler view consultants
-        LinearLayoutManager linearLayoutManagerConsultants = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager linearLayoutManagerConsultants = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,
+                false);
         rvConsultants.setLayoutManager(linearLayoutManagerConsultants);
 
         // Initialize views
@@ -163,27 +165,33 @@ public class ShowClientAdmin extends AppCompatActivity {
                     tvEmail.setText(client.getEmail());
                     tvFrequency.setText(frequencies[client.getFrequency()]);
                     tvRegistration.setText(simpleDateFormat.format(client.getRegistration()));
-                    if (client.isBlocked()) tvStatus.setText(getResources().getString(R.string.blocked));
-                    else tvStatus.setText(getResources().getString(R.string.active));
+                    if (client.isBlocked())
+                        tvStatus.setText(getResources().getString(R.string.blocked));
+                    else
+                        tvStatus.setText(getResources().getString(R.string.active));
 
                     // Update visibility
-                    if (btnUpdateClient.getVisibility() == View.GONE) btnUpdateClient.setVisibility(View.VISIBLE);
+                    if (btnUpdateClient.getVisibility() == View.GONE)
+                        btnUpdateClient.setVisibility(View.VISIBLE);
 
                     if (consultantListener == null) {
                         // Get consultants
                         CollectionReference consultantsCollectionReference = db.collection("consultants");
 
                         consultantListener = consultantsCollectionReference.whereEqualTo("deleted", null)
-                                .whereEqualTo("blocked", false).orderBy("name").addSnapshotListener((value1, error1) -> {
+                                .whereEqualTo("blocked", false).orderBy("name")
+                                .addSnapshotListener((value1, error1) -> {
                                     // Get documents and initialize list
-                                    if (value1 != null) consultantList.addAll(value1.toObjects(Consultant.class));
+                                    if (value1 != null)
+                                        consultantList.addAll(value1.toObjects(Consultant.class));
                                     assignedConsultantList.clear();
                                     assignedConsultantList.addAll(client.getConsultants());
 
                                     // Set adapter for recycler view consultants
-                                    AssignedConsultantAdapter assignedConsultantAdapter = new AssignedConsultantAdapter(consultantList, assignedConsultantList);
+                                    AssignedConsultantAdapter assignedConsultantAdapter = new AssignedConsultantAdapter(
+                                            consultantList, assignedConsultantList);
                                     rvConsultants.setAdapter(assignedConsultantAdapter);
-                        });
+                                });
                     }
                 }
             }
@@ -239,14 +247,16 @@ public class ShowClientAdmin extends AppCompatActivity {
                 ivUnits.setBackgroundResource(R.drawable.ic_arrow_right);
             } else {
                 // Show units
-                if (unitList.size() == 0) linearLayoutNoUnits.setVisibility(View.VISIBLE);
-                else rvUnits.setVisibility(View.VISIBLE);
+                if (unitList.size() == 0)
+                    linearLayoutNoUnits.setVisibility(View.VISIBLE);
+                else
+                    rvUnits.setVisibility(View.VISIBLE);
                 btnCreateUnit.setVisibility(View.VISIBLE);
                 ivUnits.setBackgroundResource(R.drawable.ic_arrow_drop);
             }
         });
         linearLayoutToggleConsultants.setOnClickListener(v -> {
-            if (btnUpdateConsultants.getVisibility() ==  View.VISIBLE) {
+            if (btnUpdateConsultants.getVisibility() == View.VISIBLE) {
                 // Hide assigned consultants
                 rvConsultants.setVisibility(View.GONE);
                 btnUpdateConsultants.setVisibility(View.GONE);
@@ -258,8 +268,10 @@ public class ShowClientAdmin extends AppCompatActivity {
                 ivConsultants.setBackgroundResource(R.drawable.ic_arrow_drop);
             }
         });
-        btnUpdateClient.setOnClickListener(v -> startActivity(new Intent(this, UpdateClientAdmin.class).putExtra("client", client)));
-        btnCreateUnit.setOnClickListener(v -> startActivity(new Intent(this, CreateUnitActivity.class).putExtra("clientId", client.getId())));
+        btnUpdateClient.setOnClickListener(
+                v -> startActivity(new Intent(this, UpdateClientAdmin.class).putExtra("client", client)));
+        btnCreateUnit.setOnClickListener(
+                v -> startActivity(new Intent(this, CreateUnitActivity.class).putExtra("clientId", client.getId())));
         btnUpdateConsultants.setOnClickListener(v -> updateAssignedConsultants());
     }
 
@@ -292,7 +304,8 @@ public class ShowClientAdmin extends AppCompatActivity {
                 AtomicInteger selectedPosition = new AtomicInteger(-1);
                 ListView listView = new ListView(this);
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.item_list_view,
-                        filteredUnits.stream().map(pair -> pair.first.getName() + " - " + pair.first.getLocation()).collect(Collectors.toList())) {
+                        filteredUnits.stream().map(pair -> pair.first.getName() + " - " + pair.first.getLocation())
+                                .collect(Collectors.toList())) {
                     @NonNull
                     @Override
                     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -327,25 +340,32 @@ public class ShowClientAdmin extends AppCompatActivity {
                 builder.setPositiveButton(getResources().getString(R.string.confirm), (dialog, which) -> {
                     if (selectedUnit[0] != null) {
                         // Open Google Maps and trace route from current location
-                        String uriStr = "https://www.google.com/maps/dir/?api=1&destination=" + selectedUnit[0].getLatitude() + "," + selectedUnit[0].getLongitude() + "&travelmode=driving";
+                        String uriStr = "https://www.google.com/maps/dir/?api=1&destination="
+                                + selectedUnit[0].getLatitude() + "," + selectedUnit[0].getLongitude()
+                                + "&travelmode=driving";
                         Uri gmmIntentUri = Uri.parse(uriStr);
                         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                         mapIntent.setPackage("com.google.android.apps.maps");
-                        if (mapIntent.resolveActivity(getPackageManager()) != null) startActivity(mapIntent);
+                        if (mapIntent.resolveActivity(getPackageManager()) != null)
+                            startActivity(mapIntent);
                     }
                 });
 
                 builder.setNegativeButton(getResources().getString(R.string.cancel), null);
                 builder.show();
-            } else Toast.makeText(this, getResources().getString(R.string.noUnits), Toast.LENGTH_SHORT).show();
+            } else
+                Toast.makeText(this, getResources().getString(R.string.noUnits), Toast.LENGTH_SHORT).show();
         } else if (itemId == R.id.call) {
             // Verify the client has information
             if (client != null) {
                 // Call the client
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:" + client.getPhone()));
-                if (intent.resolveActivity(getPackageManager()) != null) startActivity(intent);
-                else Toast.makeText(this, getResources().getString(R.string.no_app_for_calls), Toast.LENGTH_SHORT).show();
+                if (intent.resolveActivity(getPackageManager()) != null)
+                    startActivity(intent);
+                else
+                    Toast.makeText(this, getResources().getString(R.string.no_app_for_calls), Toast.LENGTH_SHORT)
+                            .show();
             }
 
             return true;
