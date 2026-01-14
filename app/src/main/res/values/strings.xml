@@ -664,4 +664,5 @@
     <string name="versionNotes">Modificaciones de la nueva versión 1.12.3\n
         \n- Se corrigió problema de clientes que no mostraban unidades de producción y diagnósticos\n
         \n- Se solucionó el error al asignar asesores a clientes en el módulo de administración\n
+        </string>
 </resources>
